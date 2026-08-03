@@ -1,0 +1,199 @@
+<header class="absolute inset-x-0 top-0 z-20">
+    <nav
+        class="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-6"
+        aria-label="Navegación principal"
+    >
+        <a
+            href="/"
+            class="flex items-center gap-1"
+            aria-label="Ir al inicio de Weider Gym"
+        >
+            <img
+                src="/images/logo/weider-icon.png"
+                alt=""
+                class="h-12 w-8 rotate-90 scale-[2.2] object-contain"
+                aria-hidden="true"
+            />
+
+            <span class="text-2xl font-black uppercase tracking-tight">
+                <span class="text-red-600">Weider</span>
+                <span class="text-white"> Gym</span>
+            </span>
+        </a>
+
+        <ul class="hidden items-center gap-7 md:flex">
+            <li>
+                <a
+                    class="text-lg font-semibold text-white transition hover:text-red-500"
+                    href="#"
+                >
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a
+                    class="text-lg font-semibold text-gray-300 transition hover:text-red-500"
+                    href="#nosotros"
+                >
+                    Nosotros
+                </a>
+            </li>
+
+            <li>
+                <a
+                    class="text-lg font-semibold text-gray-300 transition hover:text-red-500"
+                    href="#servicios"
+                >
+                    Servicios
+                </a>
+            </li>
+
+            <li>
+                <a
+                    class="text-lg font-semibold text-gray-300 transition hover:text-red-500"
+                    href="#planes"
+                >
+                    Planes
+                </a>
+            </li>
+
+            <li>
+                <a
+                    class="text-lg font-semibold text-gray-300 transition hover:text-red-500"
+                    href="#contacto"
+                >
+                    Contacto
+                </a>
+            </li>
+        </ul>
+
+        <a
+            href="#contacto"
+            class="hidden rounded-sm border-2 border-red-600 px-5 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-black md:inline-block"
+        >
+            Clase gratis
+        </a>
+        <button
+            id="menu-button"
+            type="button"
+            class="inline-flex items-center justify-center rounded-sm border border-gray-700 p-2 text-white transition hover:border-red-600 hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 md:hidden"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+            >
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+        </button>
+    </nav>
+    <div
+        id="mobile-menu"
+        class="mx-6 hidden border-t border-gray-800 bg-black/95 px-6 py-6 backdrop-blur-sm md:hidden"
+    >
+        <ul class="flex flex-col gap-5">
+            <li>
+                <a
+                    class="mobile-link text-lg font-semibold text-white transition hover:text-red-500"
+                    href="#"
+                >
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a
+                    class="mobile-link text-lg font-semibold text-gray-300 transition hover:text-red-500"
+                    href="#nosotros"
+                >
+                    Nosotros
+                </a>
+            </li>
+
+            <li>
+                <a
+                    class="mobile-link text-lg font-semibold text-gray-300 transition hover:text-red-500"
+                    href="#servicios"
+                >
+                    Servicios
+                </a>
+            </li>
+
+            <li>
+                <a
+                    class="mobile-link text-lg font-semibold text-gray-300 transition hover:text-red-500"
+                    href="#planes"
+                >
+                    Planes
+                </a>
+            </li>
+
+            <li>
+                <a
+                    class="mobile-link text-lg font-semibold text-gray-300 transition hover:text-red-500"
+                    href="#contacto"
+                >
+                    Contacto
+                </a>
+            </li>
+        </ul>
+
+        <div class="mt-6 flex justify-center">
+            <a
+                class="mobile-link inline-block rounded-sm border-2 border-red-600 px-6 py-3 text-center text-sm font-bold uppercase tracking-wide text-white transition hover:bg-red-600"
+                href="#contacto"
+            >
+                Clase gratis
+            </a>
+        </div>
+    </div>
+</header>
+
+<script>
+    const menuButton = document.querySelector("#menu-button");
+    const mobileMenu = document.querySelector("#mobile-menu");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+
+    if (
+        menuButton instanceof HTMLButtonElement &&
+        mobileMenu instanceof HTMLElement
+    ) {
+        menuButton.addEventListener("click", () => {
+            const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+
+            menuButton.setAttribute("aria-expanded", String(!isOpen));
+            menuButton.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Abrir menú de navegación"
+                    : "Cerrar menú de navegación",
+            );
+
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        mobileLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                menuButton.setAttribute("aria-expanded", "false");
+                menuButton.setAttribute(
+                    "aria-label",
+                    "Abrir menú de navegación",
+                );
+                mobileMenu.classList.add("hidden");
+            });
+        });
+    }
+</script>
