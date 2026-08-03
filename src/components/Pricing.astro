@@ -1,3 +1,7 @@
+---
+import Check from "@lucide/astro/icons/check";
+---
+
 <section id="planes" class="bg-zinc-950 py-20 text-white md:py-28">
     <div class="mx-auto w-full max-w-7xl px-6">
         <header class="mx-auto max-w-3xl text-center">
@@ -20,56 +24,193 @@
             </p>
         </header>
 
-        <div>
-            <article>
+        <div
+            class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:items-stretch"
+        >
+            <article
+                class="flex h-full flex-col rounded-sm border border-zinc-800 bg-black/40 p-6 transition duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-black/60"
+            >
                 <header>
-                    <p>Plan mensual</p>
-                    <h3>8 clases</h3>
+                    <p
+                        class="text-sm font-bold uppercase tracking-[0.2em] text-red-500"
+                    >
+                        Plan mensual
+                    </p>
+
+                    <h3 class="mt-3 text-4xl font-black uppercase text-white">
+                        8 clases
+                    </h3>
                 </header>
 
-                <p>Consultar valor</p>
+                <p class="mt-6 text-2xl font-black text-white">
+                    Consultar valor
+                </p>
 
-                <ul>
-                    <li>Entrenamiento personalizado</li>
-                    <li>Seguimiento de tu progreso</li>
-                    <li>Horarios flexibles</li>
+                <ul class="mt-6 space-y-4 text-gray-300">
+                    <li class="flex items-start gap-3">
+                        <Check
+                            class="mt-0.5 size-5 shrink-0 text-red-500"
+                            stroke-width={2.5}
+                            aria-hidden="true"
+                        />
+
+                        <span>Entrenamiento personalizado</span>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <Check
+                            class="mt-0.5 size-5 shrink-0 text-red-500"
+                            stroke-width={2.5}
+                            aria-hidden="true"
+                        />
+
+                        <span>Seguimiento de tu progreso</span>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <Check
+                            class="mt-0.5 size-5 shrink-0 text-red-500"
+                            stroke-width={2.5}
+                            aria-hidden="true"
+                        />
+
+                        <span>Horarios flexibles</span>
+                    </li>
                 </ul>
 
-                <a href="#contacto"> Consultar plan </a>
+                <a href="#contacto" class="mt-auto pt-8">
+                    <span
+                        class="block rounded-sm border-2 border-red-600 px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-white transition hover:bg-red-600"
+                    >
+                        Consultar plan
+                    </span>
+                </a>
             </article>
 
-            <article>
-                <header>
-                    <p>Plan mensual</p>
-                    <h3>12 clases</h3>
+            <article
+                class="relative flex h-full flex-col rounded-sm border-2 border-red-600 bg-black/70 p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-red-950/40"
+            >
+                <span
+                    class="absolute right-4 top-4 rounded-sm bg-red-600 px-3 py-1 text-xs font-black uppercase tracking-wide text-white"
+                >
+                    Más elegido
+                </span>
+
+                <header class="pr-28">
+                    <p
+                        class="text-sm font-bold uppercase tracking-[0.2em] text-red-500"
+                    >
+                        Plan mensual
+                    </p>
+
+                    <h3 class="mt-3 text-4xl font-black uppercase text-white">
+                        12 clases
+                    </h3>
                 </header>
 
-                <p>Consultar valor</p>
+                <p class="mt-6 text-2xl font-black text-white">
+                    Consultar valor
+                </p>
 
-                <ul>
-                    <li>Entrenamiento personalizado</li>
-                    <li>Seguimiento de tu progreso</li>
-                    <li>Horarios flexibles</li>
+                <ul class="mt-6 space-y-4 text-gray-300">
+                    <li class="flex items-start gap-3">
+                        <Check
+                            class="mt-0.5 size-5 shrink-0 text-red-500"
+                            stroke-width={2.5}
+                            aria-hidden="true"
+                        />
+
+                        <span>Entrenamiento personalizado</span>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <Check
+                            class="mt-0.5 size-5 shrink-0 text-red-500"
+                            stroke-width={2.5}
+                            aria-hidden="true"
+                        />
+
+                        <span>Seguimiento de tu progreso</span>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <Check
+                            class="mt-0.5 size-5 shrink-0 text-red-500"
+                            stroke-width={2.5}
+                            aria-hidden="true"
+                        />
+
+                        <span>Horarios flexibles</span>
+                    </li>
                 </ul>
 
-                <a href="#contacto"> Consultar plan </a>
+                <a href="#contacto" class="mt-auto pt-8">
+                    <span
+                        class="block rounded-sm bg-red-600 px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-white transition hover:bg-red-700"
+                    >
+                        Consultar plan
+                    </span>
+                </a>
             </article>
 
-            <article>
+            <article
+                class="flex h-full flex-col rounded-sm border border-zinc-800 bg-black/40 p-6 transition duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-black/60"
+            >
                 <header>
-                    <p>Plan mensual</p>
-                    <h3>20 clases</h3>
+                    <p
+                        class="text-sm font-bold uppercase tracking-[0.2em] text-red-500"
+                    >
+                        Plan mensual
+                    </p>
+
+                    <h3 class="mt-3 text-4xl font-black uppercase text-white">
+                        20 clases
+                    </h3>
                 </header>
 
-                <p>Consultar valor</p>
+                <p class="mt-6 text-2xl font-black text-white">
+                    Consultar valor
+                </p>
 
-                <ul>
-                    <li>Entrenamiento personalizado</li>
-                    <li>Seguimiento de tu progreso</li>
-                    <li>Horarios flexibles</li>
+                <ul class="mt-6 space-y-4 text-gray-300">
+                    <li class="flex items-start gap-3">
+                        <Check
+                            class="mt-0.5 size-5 shrink-0 text-red-500"
+                            stroke-width={2.5}
+                            aria-hidden="true"
+                        />
+
+                        <span>Entrenamiento personalizado</span>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <Check
+                            class="mt-0.5 size-5 shrink-0 text-red-500"
+                            stroke-width={2.5}
+                            aria-hidden="true"
+                        />
+
+                        <span>Seguimiento de tu progreso</span>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <Check
+                            class="mt-0.5 size-5 shrink-0 text-red-500"
+                            stroke-width={2.5}
+                            aria-hidden="true"
+                        />
+
+                        <span>Horarios flexibles</span>
+                    </li>
                 </ul>
 
-                <a href="#contacto"> Consultar plan </a>
+                <a href="#contacto" class="mt-auto pt-8">
+                    <span
+                        class="block rounded-sm border-2 border-red-600 px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-white transition hover:bg-red-600"
+                    >
+                        Consultar plan
+                    </span>
+                </a>
             </article>
         </div>
     </div>

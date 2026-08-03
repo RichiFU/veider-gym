@@ -1,0 +1,226 @@
+---
+import MapPin from "@lucide/astro/icons/map-pin";
+import MessageCircle from "@lucide/astro/icons/message-circle";
+import Clock from "@lucide/astro/icons/clock";
+---
+
+<section id="contacto" class="bg-black py-20 text-white md:py-28">
+    <div class="mx-auto w-full max-w-7xl px-6">
+        <div class="grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div>
+                <header class="max-w-xl">
+                    <span
+                        class="border-l-4 border-red-600 pl-3 text-sm font-bold uppercase tracking-[0.2em] text-red-500"
+                        >Contacto</span
+                    >
+
+                    <h2
+                        class="mt-6 text-4xl font-black uppercase leading-tight tracking-tight md:text-5xl"
+                    >
+                        Da el primer paso hacia tus objetivos
+                    </h2>
+
+                    <p class="mt-6 text-lg leading-relaxed text-gray-400">
+                        Escríbenos para conocer nuestros planes, resolver tus
+                        dudas o agendar una clase de prueba.
+                    </p>
+                </header>
+
+                <address class="mt-10 grid gap-6 not-italic sm:grid-cols-2">
+                    <div class="flex gap-4 border-l-2 border-zinc-800 pl-4">
+                        <MapPin
+                            class="mt-1 size-6 shrink-0 text-red-500"
+                            stroke-width={2}
+                            aria-hidden="true"
+                        />
+
+                        <div>
+                            <h3
+                                class="font-bold uppercase tracking-wide text-white"
+                            >
+                                Ubicación
+                            </h3>
+
+                            <p class="mt-2 leading-relaxed text-gray-400">
+                                Temuco, Chile
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 border-l-2 border-zinc-800 pl-4">
+                        <MessageCircle
+                            class="mt-1 size-6 shrink-0 text-red-500"
+                            stroke-width={2}
+                            aria-hidden="true"
+                        />
+
+                        <div>
+                            <h3
+                                class="font-bold uppercase tracking-wide text-white"
+                            >
+                                WhatsApp
+                            </h3>
+
+                            <a
+                                href="#"
+                                class="mt-2 inline-block text-gray-400 transition hover:text-red-500"
+                            >
+                                Número por confirmar
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 border-l-2 border-zinc-800 pl-4">
+                        <span class="instagram-icon mt-1" aria-hidden="true"
+                        ></span>
+
+                        <div>
+                            <h3
+                                class="font-bold uppercase tracking-wide text-white"
+                            >
+                                Instagram
+                            </h3>
+
+                            <a
+                                href="#"
+                                class="mt-2 inline-block text-gray-400 transition hover:text-red-500"
+                            >
+                                Perfil por confirmar
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 border-l-2 border-zinc-800 pl-4">
+                        <Clock
+                            class="mt-1 size-6 shrink-0 text-red-500"
+                            stroke-width={2}
+                            aria-hidden="true"
+                        />
+                        <div>
+                            <h3
+                                class="font-bold uppercase tracking-wide text-white"
+                            >
+                                Horario
+                            </h3>
+                            <p class="mt-2 leading-relaxed text-gray-400">
+                                Horario por confirmar
+                            </p>
+                        </div>
+                    </div>
+                </address>
+            </div>
+
+            <form
+                aria-label="Formulario de contacto"
+                class="relative overflow-hidden rounded-sm border border-zinc-800 bg-zinc-950 p-6 md:p-8"
+            >
+                <div
+                    class="absolute left-0 top-0 h-1 w-full bg-red-600"
+                    aria-hidden="true"
+                >
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <label
+                            for="nombre"
+                            class="mb-2 block text-sm font-bold uppercase tracking-wide text-gray-300"
+                            >Nombre</label
+                        >
+
+                        <input
+                            id="nombre"
+                            name="nombre"
+                            type="text"
+                            autocomplete="name"
+                            required
+                            class="w-full rounded-sm border border-zinc-700 bg-black px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-red-600 focus:ring-2 focus:ring-red-600/20"
+                            placeholder="Tu nombre"
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            for="telefono"
+                            class="mb-2 block text-sm font-bold uppercase tracking-wide text-gray-300"
+                        >
+                            Teléfono
+                        </label>
+
+                        <input
+                            id="telefono"
+                            name="telefono"
+                            type="tel"
+                            autocomplete="tel"
+                            required
+                            placeholder="+56 9 1234 5678"
+                            class="w-full rounded-sm border border-zinc-700 bg-black px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-red-600 focus:ring-2 focus:ring-red-600/20"
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            for="email"
+                            class="mb-2 block text-sm font-bold uppercase tracking-wide text-gray-300"
+                        >
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            placeholder="correo@ejemplo.cl"
+                            class="w-full rounded-sm border border-zinc-700 bg-black px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-red-600 focus:ring-2 focus:ring-red-600/20"
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            for="mensaje"
+                            class="mb-2 block text-sm font-bold uppercase tracking-wide text-gray-300"
+                        >
+                            Mensaje
+                        </label>
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="5"
+                            required
+                            placeholder="Cuéntanos qué objetivo quieres alcanzar"
+                            class="w-full resize-y rounded-sm border border-zinc-700 bg-black px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-red-600 focus:ring-2 focus:ring-red-600/20"
+                        ></textarea>
+                    </div>
+                </div>
+
+                <button
+                    type="submit"
+                    class="mt-8 w-full rounded-sm bg-red-600 px-6 py-3 font-bold uppercase tracking-wide text-white transition duration-300 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-zinc-950"
+                >
+                    Enviar consulta
+                </button>
+            </form>
+        </div>
+
+        <div>
+            <p>Mapa de ubicación por confirmar</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .instagram-icon {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        flex-shrink: 0;
+        background-color: #ef4444;
+
+        mask: url("/images/social/instagram-logo.svg") center / contain
+            no-repeat;
+        -webkit-mask: url("/images/social/instagram-logo.svg") center / contain
+            no-repeat;
+    }
+</style>
