@@ -111,9 +111,22 @@ import Clock from "@lucide/astro/icons/clock";
             </div>
 
             <form
+                action="https://formspree.io/f/ID_DEL_FORMULARIO"
+                method="POST"
                 aria-label="Formulario de contacto"
                 class="relative overflow-hidden rounded-sm border border-zinc-800 bg-zinc-950 p-6 md:p-8"
             >
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="Nueva consulta desde Weider Gym"
+                />
+
+                <input
+                    type="hidden"
+                    name="origen"
+                    value="Landing page Weider Gym"
+                />
                 <div
                     class="absolute left-0 top-0 h-1 w-full bg-red-600"
                     aria-hidden="true"
@@ -121,41 +134,44 @@ import Clock from "@lucide/astro/icons/clock";
                 </div>
 
                 <div class="space-y-6">
-                    <div>
-                        <label
-                            for="nombre"
-                            class="mb-2 block text-sm font-bold uppercase tracking-wide text-gray-300"
-                            >Nombre</label
-                        >
+                    <div class="grid gap-6 sm:grid-cols-2">
+                        <div>
+                            <label
+                                for="nombre"
+                                class="mb-2 block text-sm font-bold uppercase tracking-wide text-gray-300"
+                            >
+                                Nombre
+                            </label>
 
-                        <input
-                            id="nombre"
-                            name="nombre"
-                            type="text"
-                            autocomplete="name"
-                            required
-                            class="w-full rounded-sm border border-zinc-700 bg-black px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-red-600 focus:ring-2 focus:ring-red-600/20"
-                            placeholder="Tu nombre"
-                        />
-                    </div>
+                            <input
+                                id="nombre"
+                                name="nombre"
+                                type="text"
+                                autocomplete="name"
+                                required
+                                placeholder="Tu nombre"
+                                class="w-full rounded-sm border border-zinc-700 bg-black px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-red-600 focus:ring-2 focus:ring-red-600/20"
+                            />
+                        </div>
 
-                    <div>
-                        <label
-                            for="telefono"
-                            class="mb-2 block text-sm font-bold uppercase tracking-wide text-gray-300"
-                        >
-                            Teléfono
-                        </label>
+                        <div>
+                            <label
+                                for="telefono"
+                                class="mb-2 block text-sm font-bold uppercase tracking-wide text-gray-300"
+                            >
+                                Teléfono
+                            </label>
 
-                        <input
-                            id="telefono"
-                            name="telefono"
-                            type="tel"
-                            autocomplete="tel"
-                            required
-                            placeholder="+56 9 1234 5678"
-                            class="w-full rounded-sm border border-zinc-700 bg-black px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-red-600 focus:ring-2 focus:ring-red-600/20"
-                        />
+                            <input
+                                id="telefono"
+                                name="telefono"
+                                type="tel"
+                                autocomplete="tel"
+                                required
+                                placeholder="+56 9 1234 5678"
+                                class="w-full rounded-sm border border-zinc-700 bg-black px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-red-600 focus:ring-2 focus:ring-red-600/20"
+                            />
+                        </div>
                     </div>
 
                     <div>
@@ -171,6 +187,7 @@ import Clock from "@lucide/astro/icons/clock";
                             name="email"
                             type="email"
                             autocomplete="email"
+                            required
                             placeholder="correo@ejemplo.cl"
                             class="w-full rounded-sm border border-zinc-700 bg-black px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-red-600 focus:ring-2 focus:ring-red-600/20"
                         />
@@ -204,8 +221,46 @@ import Clock from "@lucide/astro/icons/clock";
             </form>
         </div>
 
-        <div>
-            <p>Mapa de ubicación por confirmar</p>
+        <!-- Ubicación provisional: reemplazar por la dirección real de Weider Gym -->
+        <!-- Ubicación provisional: reemplazar por la dirección real de Weider Gym -->
+        <div
+            class="mx-auto mt-20 grid max-w-5xl overflow-hidden rounded-sm border border-zinc-800 bg-zinc-950 lg:mt-26 lg:grid-cols-[1.1fr_0.9fr]"
+        >
+            <div class="flex flex-col justify-center p-6 md:p-8">
+                <p
+                    class="text-sm font-bold uppercase tracking-[0.2em] text-red-500"
+                >
+                    Encuéntranos
+                </p>
+
+                <h3 class="mt-3 text-3xl font-black uppercase text-white">
+                    Weider Gym en Temuco
+                </h3>
+
+                <p class="mt-4 max-w-md leading-relaxed text-gray-400">
+                    Consulta nuestra ubicación y abre la ruta directamente en
+                    Google Maps.
+                </p>
+
+                <a
+                    href="https://share.google/85mbCPsLeaTH4NTUL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mt-6 inline-block self-start rounded-sm border-2 border-red-600 px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-white transition hover:bg-red-600"
+                >
+                    Cómo llegar
+                </a>
+            </div>
+
+            <div class="h-72 sm:h-80 lg:h-88">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.3219883633797!2d-72.6109058!3d-38.7333728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96623f0f6ecffc81%3A0xa0819486bef36f8d!2sPortal%20Temuco!5e0!3m2!1ses!2scl!4v1785797017339!5m2!1ses!2scl"
+                    title="Ubicación provisional de Weider Gym en Temuco"
+                    class="h-full w-full border-0 grayscale-20 brightness-75 contrast-125"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
         </div>
     </div>
 </section>
