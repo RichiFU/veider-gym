@@ -1,0 +1,20 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="7 10 34 85"
+    fill="none"
+>
+    <g fill="#dc2626">
+        <!-- Barra central -->
+        <rect x="19" y="29" width="10" height="46" rx="0" />
+
+        <!-- Pesos superiores -->
+        <rect x="7" y="22.5" width="34" height="9" rx="2" />
+        <rect x="9" y="15.5" width="30" height="6.5" rx="2" />
+        <rect x="12" y="10" width="24" height="5" rx="2" />
+
+        <!-- Pesos inferiores -->
+        <rect x="7" y="73" width="34" height="9" rx="2" />
+        <rect x="9" y="82.5" width="30" height="6.5" rx="2" />
+        <rect x="12" y="89.5" width="24" height="5" rx="2" />
+    </g>
+</svg>
