@@ -2,6 +2,27 @@
 import BadgeCheck from "@lucide/astro/icons/badge-check";
 import ShieldCheck from "@lucide/astro/icons/shield-check";
 import Target from "@lucide/astro/icons/target";
+
+const benefits = [
+    {
+        icon: BadgeCheck,
+        title: "Calidad",
+        description:
+            "Entrenamientos planificados y atención enfocada en tu progreso.",
+    },
+    {
+        icon: ShieldCheck,
+        title: "Exclusividad",
+        description:
+            "Acceso limitado para mantener una experiencia cercana y personalizada.",
+    },
+    {
+        icon: Target,
+        title: "Resultados",
+        description:
+            "Objetivos claros, seguimiento constante y trabajo adaptado a ti.",
+    },
+];
 ---
 
 <section id="nosotros" class="bg-zinc-950 py-20 text-white md:py-28">
@@ -34,68 +55,27 @@ import Target from "@lucide/astro/icons/target";
         </div>
 
         <div class="grid gap-4 md:grid-cols-3 lg:grid-cols-1">
-            <article
-                class="h-full rounded-sm border border-zinc-800 bg-black/50 p-6 transition hover:border-red-600 hover:bg-black/70"
-            >
-                <div class="flex items-center gap-3">
-                    <BadgeCheck
-                        class="size-8 shrink-0 text-red-500"
-                        stroke-width={2.2}
-                        aria-hidden="true"
-                    />
+            {
+                benefits.map(({ icon: Icon, title, description }) => (
+                    <article class="h-full rounded-sm border border-zinc-800 bg-black/50 p-6 transition hover:border-red-600 hover:bg-black/70">
+                        <div class="flex items-center gap-3">
+                            <Icon
+                                class="size-8 shrink-0 text-red-500"
+                                stroke-width={2.2}
+                                aria-hidden="true"
+                            />
 
-                    <h3 class="text-xl font-black uppercase text-white">
-                        Calidad
-                    </h3>
-                </div>
+                            <h3 class="text-xl font-black uppercase text-white">
+                                {title}
+                            </h3>
+                        </div>
 
-                <p class="mt-4 leading-relaxed text-gray-400">
-                    Entrenamientos planificados y atención enfocada en tu
-                    progreso.
-                </p>
-            </article>
-
-            <article
-                class="h-full rounded-sm border border-zinc-800 bg-black/50 p-6 transition hover:border-red-600 hover:bg-black/70"
-            >
-                <div class="flex items-center gap-3">
-                    <ShieldCheck
-                        class="size-8 shrink-0 text-red-500"
-                        stroke-width={2.2}
-                        aria-hidden="true"
-                    />
-
-                    <h3 class="text-xl font-black uppercase text-white">
-                        Exclusividad
-                    </h3>
-                </div>
-
-                <p class="mt-4 leading-relaxed text-gray-400">
-                    Acceso limitado para mantener una experiencia cercana y
-                    personalizada.
-                </p>
-            </article>
-
-            <article
-                class="h-full rounded-sm border border-zinc-800 bg-black/50 p-6 transition hover:border-red-600 hover:bg-black/70"
-            >
-                <div class="flex items-center gap-3">
-                    <Target
-                        class="size-8 shrink-0 text-red-500"
-                        stroke-width={2.2}
-                        aria-hidden="true"
-                    />
-
-                    <h3 class="text-xl font-black uppercase text-white">
-                        Resultados
-                    </h3>
-                </div>
-
-                <p class="mt-4 leading-relaxed text-gray-400">
-                    Objetivos claros, seguimiento constante y trabajo adaptado a
-                    ti.
-                </p>
-            </article>
+                        <p class="mt-4 leading-relaxed text-gray-400">
+                            {description}
+                        </p>
+                    </article>
+                ))
+            }
         </div>
     </div>
 </section>
