@@ -218,7 +218,6 @@ import Clock from "@lucide/astro/icons/clock";
 
                     <button
                         type="submit"
-                        data-fs-submit-btn
                         class="mt-8 w-full rounded-sm bg-red-600 px-6 py-3 font-bold uppercase tracking-wide text-white transition duration-300 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-zinc-950 disabled:cursor-not-allowed disabled:opacity-60"
                     >
                         Enviar consulta
@@ -247,45 +246,47 @@ import Clock from "@lucide/astro/icons/clock";
     </div>
 
     <!-- Ubicación provisional: reemplazar por la dirección real de Weider Gym -->
-    <div
-        class="mx-auto mt-20 grid max-w-5xl overflow-hidden rounded-sm border border-zinc-800 bg-zinc-950 lg:mt-26 lg:grid-cols-[1.1fr_0.9fr]"
-    >
-        <div class="flex flex-col justify-center p-6 md:p-8">
-            <p
-                class="text-sm font-bold uppercase tracking-[0.2em] text-red-500"
-            >
-                Encuéntranos
-            </p>
+    <div class="px-6">
+        <div
+            class="mx-auto mt-20 grid max-w-5xl overflow-hidden rounded-sm border border-zinc-800 bg-zinc-950 lg:mt-26 lg:grid-cols-[1.1fr_0.9fr]"
+        >
+            <div class="flex flex-col justify-center p-6 md:p-8">
+                <p
+                    class="text-sm font-bold uppercase tracking-[0.2em] text-red-500"
+                >
+                    Encuéntranos
+                </p>
 
-            <h3
-                class="mt-3 text-2xl font-black uppercase text-white sm:text-3xl"
-            >
-                Weider Gym en Temuco
-            </h3>
+                <h3
+                    class="mt-3 text-2xl font-black uppercase text-white sm:text-3xl"
+                >
+                    Weider Gym en Temuco
+                </h3>
 
-            <p class="mt-4 max-w-md leading-relaxed text-gray-400">
-                Consulta nuestra ubicación y abre la ruta directamente en Google
-                Maps.
-            </p>
+                <p class="mt-4 max-w-md leading-relaxed text-gray-400">
+                    Consulta nuestra ubicación y abre la ruta directamente en
+                    Google Maps.
+                </p>
 
-            <a
-                href="https://share.google/85mbCPsLeaTH4NTUL"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="mt-6 inline-block self-start rounded-sm border-2 border-red-600 px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-white transition hover:bg-red-600"
-            >
-                Cómo llegar
-            </a>
-        </div>
+                <a
+                    href="https://share.google/85mbCPsLeaTH4NTUL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mt-6 inline-block self-start rounded-sm border-2 border-red-600 px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-white transition hover:bg-red-600"
+                >
+                    Cómo llegar
+                </a>
+            </div>
 
-        <div class="h-64 sm:h-80 lg:h-88">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.3219883633797!2d-72.6109058!3d-38.7333728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96623f0f6ecffc81%3A0xa0819486bef36f8d!2sPortal%20Temuco!5e0!3m2!1ses!2scl!4v1785797017339!5m2!1ses!2scl"
-                title="Ubicación provisional de Weider Gym en Temuco"
-                class="h-full w-full border-0 grayscale-20 brightness-75 contrast-125"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <div class="h-64 sm:h-80 lg:h-88">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.3219883633797!2d-72.6109058!3d-38.7333728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96623f0f6ecffc81%3A0xa0819486bef36f8d!2sPortal%20Temuco!5e0!3m2!1ses!2scl!4v1785797017339!5m2!1ses!2scl"
+                    title="Ubicación provisional de Weider Gym en Temuco"
+                    class="h-full w-full border-0 grayscale-20 brightness-75 contrast-125"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
         </div>
     </div>
 </section>

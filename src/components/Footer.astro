@@ -92,32 +92,18 @@ const footerLinks = [
             </h2>
 
             <ul class="mt-5 space-y-3">
-                <li>
-                    <a
-                        href="#servicios"
-                        class="text-gray-400 transition hover:text-red-500 focus:outline-none focus:text-red-500"
-                    >
-                        Servicios
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        href="#planes"
-                        class="text-gray-400 transition hover:text-red-500 focus:outline-none focus:text-red-500"
-                    >
-                        Planes
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        href="#contacto"
-                        class="text-gray-400 transition hover:text-red-500 focus:outline-none focus:text-red-500"
-                    >
-                        Contacto
-                    </a>
-                </li>
+                {
+                    footerLinks.map((link) => (
+                        <li>
+                            <a
+                                href={link.href}
+                                class="text-gray-400 transition hover:text-red-500 focus:outline-none focus:text-red-500"
+                            >
+                                {link.label}
+                            </a>
+                        </li>
+                    ))
+                }
             </ul>
         </nav>
 
