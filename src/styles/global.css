@@ -2,4 +2,53 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: #000;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background-color: #000;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition:
+        opacity 700ms ease,
+        transform 700ms ease;
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-24px);
+    transition:
+        opacity 900ms ease,
+        transform 900ms ease;
+}
+
+.reveal-left.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
 }

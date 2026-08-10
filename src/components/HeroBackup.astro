@@ -1,0 +1,92 @@
+---
+import ArrowRight from "@lucide/astro/icons/arrow-right";
+---
+
+<section
+    id="inicio"
+    class="bg-black px-4 pb-12 pt-28 text-white sm:px-6 sm:pb-16 sm:pt-32"
+>
+    <div
+        class="relative mx-auto min-h-[620px] w-full max-w-7xl overflow-hidden rounded-sm bg-black bg-[url('/images/hero/hero-weider.webp')] bg-cover bg-[65%_center] shadow-2xl sm:min-h-[680px] lg:min-h-[720px] lg:bg-center"
+    >
+        <!-- Oscurecimiento general suave -->
+        <div
+            class="absolute inset-0 bg-black/80 sm:bg-black/10"
+            aria-hidden="true"
+        >
+        </div>
+
+        <!-- Degradado principal para mantener legible la zona izquierda -->
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/55 to-transparent"
+            aria-hidden="true"
+        >
+        </div>
+
+        <!-- Contenido -->
+        <div
+            class="relative z-10 flex min-h-[620px] items-center px-4 py-8 sm:min-h-[680px] sm:px-8 sm:py-10 lg:min-h-[720px] lg:px-12"
+        >
+            <div
+                class="relative w-full max-w-2xl px-6 py-10 sm:px-10 sm:py-12 lg:px-12 lg:py-14"
+            >
+                <!-- Línea vertical izquierda -->
+                <div
+                    class="pointer-events-none absolute left-0 top-0 h-[14.5rem] w-1.5 bg-gradient-to-b from-red-600/35 via-red-900/20 to-transparent"
+                    aria-hidden="true"
+                >
+                </div>
+
+                <!-- Línea horizontal superior -->
+                <div
+                    class="pointer-events-none absolute left-1.5 top-0 h-px w-72 bg-gradient-to-r from-red-600/35 via-red-900/20 to-transparent"
+                    aria-hidden="true"
+                >
+                </div>
+
+                <!-- Etiqueta -->
+                <span
+                    class="border-l-4 border-red-600 pl-3 text-sm font-bold uppercase tracking-[0.2em] text-red-500"
+                >
+                    Entrenamiento personalizado
+                </span>
+
+                <!-- Título -->
+                <h1
+                    class="mt-6 text-4xl font-black uppercase leading-none tracking-tight sm:text-5xl lg:text-7xl"
+                >
+                    Weider Gym
+                </h1>
+
+                <!-- Descripción -->
+                <p
+                    class="mt-6 max-w-xl text-lg leading-relaxed text-gray-200 sm:text-xl"
+                >
+                    Entrena en un espacio exclusivo en Temuco, con atención
+                    personalizada, clases de alto nivel y objetivos diseñados
+                    para ti.
+                </p>
+
+                <!-- CTA -->
+                <div class="mt-8">
+                    <a
+                        href="#contacto"
+                        class="group inline-flex w-full items-center justify-center gap-3 rounded-sm bg-red-600 px-5 py-4 text-center text-sm font-bold uppercase tracking-wide text-white transition hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-black sm:w-auto sm:px-6 sm:text-base"
+                    >
+                        <span class="sm:hidden"> Agenda tu clase gratis </span>
+
+                        <span class="hidden sm:inline">
+                            Agenda tu clase de prueba gratis
+                        </span>
+
+                        <ArrowRight
+                            class="size-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1"
+                            stroke-width={2.5}
+                            aria-hidden="true"
+                        />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

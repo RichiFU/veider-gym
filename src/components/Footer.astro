@@ -27,20 +27,37 @@ const footerLinks = [
         <div>
             <a
                 href="#inicio"
+                class="flex items-center gap-0"
                 aria-label="Ir al inicio de Weider Gym"
-                class="inline-flex items-center gap-0"
             >
                 <img
                     src="/images/logo/weider-icon.svg"
                     alt=""
-                    class="h-12 w-8 object-contain"
+                    class="h-12 w-8 shrink-0 object-contain sm:h-14 sm:w-10"
                     aria-hidden="true"
                 />
 
-                <span class="text-2xl font-black uppercase tracking-tight">
-                    <span class="text-red-600">Weider</span>
-                    <span class="text-white"> Gym</span>
-                </span>
+                <div
+                    class="-translate-y-0.5 flex flex-col items-start leading-none"
+                >
+                    <span
+                        class="origin-left scale-x-[1.06] text-[1.75rem] font-black uppercase tracking-[0.01em] text-white sm:text-[2.05rem]"
+                    >
+                        Weider
+                    </span>
+
+                    <span
+                        class="mt-1 whitespace-nowrap text-[5.5px] font-bold uppercase tracking-[0.08em] sm:text-[6.6px] sm:tracking-[0.09em]"
+                    >
+                        <span class="text-red-600">Gym Club</span>
+
+                        <span class="mx-1 text-gray-500">|</span>
+
+                        <span class="text-gray-300">
+                            Bodybuilding &amp; Fitness
+                        </span>
+                    </span>
+                </div>
             </a>
 
             <p class="mt-2 text-sm font-bold uppercase tracking-[0.15em]">
@@ -129,7 +146,7 @@ const footerLinks = [
     <!-- Copyright -->
     <div class="border-t border-zinc-800">
         <div class="mx-auto w-full max-w-7xl px-6 py-6 text-center">
-            <p class="text-sm text-gray-500">
+            <p class="text-sm text-gray-400">
                 © 2026 Weider Gym. Todos los derechos reservados.
             </p>
         </div>

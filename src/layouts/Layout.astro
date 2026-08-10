@@ -2,25 +2,74 @@
 import "../styles/global.css";
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="description"
+			content="Entrena en Weider Gym Temuco con atención personalizada, clases grupales y planes diseñados para alcanzar tus objetivos."
+		/>
+
+		<!-- Open Graph -->
+
+		<meta
+			property="og:title"
+			content="Weider Gym | Entrenamiento personalizado en Temuco"
+		/>
+		<meta
+			property="og:description"
+			content="Entrena en Weider Gym Temuco con atención personalizada, clases grupales y planes diseñados para alcanzar tus objetivos."
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="/images/social/weider-og.webp" />
+		<meta property="og:locale" content="es_CL" />
+
+		<!-- X / Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			name="twitter:title"
+			content="Weider Gym | Entrenamiento personalizado en Temuco"
+		/>
+		<meta
+			name="twitter:description"
+			content="Entrena en Weider Gym Temuco con atención personalizada, clases grupales y planes diseñados para alcanzar tus objetivos."
+		/>
+		<meta name="twitter:image" content="/images/social/weider-og.webp" />
+
+		<!-- Favicon -->
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/images/logo/weider-icon.svg"
+		/>
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Weider Gym | Entrenamiento personalizado en Temuco</title>
 	</head>
-	<body>
+	<body class="bg-black text-white">
 		<slot />
+		<script>
+			const revealElements = document.querySelectorAll(
+				".reveal, .reveal-left",
+			);
+
+			const observer = new IntersectionObserver(
+				(entries, observer) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("is-visible");
+							observer.unobserve(entry.target);
+						}
+					});
+				},
+				{
+					threshold: 0.15,
+				},
+			);
+
+			revealElements.forEach((element) => {
+				observer.observe(element);
+			});
+		</script>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

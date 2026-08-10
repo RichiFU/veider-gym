@@ -29,7 +29,7 @@ const benefits = [
     <div
         class="mx-auto grid w-full max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center"
     >
-        <div>
+        <div class="reveal reveal-left">
             <span
                 class="border-l-4 border-red-600 pl-3 text-sm font-bold uppercase tracking-[0.2em] text-red-500"
             >
@@ -56,8 +56,11 @@ const benefits = [
 
         <div class="grid gap-4 md:grid-cols-3 lg:grid-cols-1">
             {
-                benefits.map(({ icon: Icon, title, description }) => (
-                    <article class="h-full rounded-sm border border-zinc-800 bg-black/50 p-6 transition hover:border-red-600 hover:bg-black/70">
+                benefits.map(({ icon: Icon, title, description }, index) => (
+                    <article
+                        class="h-full rounded-sm border border-zinc-800 bg-black/50 p-6 transition hover:border-red-600 hover:bg-black/70 reveal"
+                        style={`--reveal-delay: ${index * 160}ms`}
+                    >
                         <div class="flex items-center gap-3">
                             <Icon
                                 class="size-8 shrink-0 text-red-500"
