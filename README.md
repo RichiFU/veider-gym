@@ -2,7 +2,7 @@
 
 Landing page desarrollada para un gimnasio en Temuco, Chile, enfocada en presentar sus servicios, planes de entrenamiento y canales de contacto mediante una interfaz moderna, responsive y orientada a conversión.
 
-🌐 **Demo:** https://weider-gym.netlify.app/
+🌐 **Demo:** https://veider-gym.netlify.app/
 
 ![Vista previa de Weider Gym](./src/assets/weider-preview.webp)
 
