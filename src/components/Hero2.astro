@@ -1,0 +1,69 @@
+---
+import ArrowRight from "@lucide/astro/icons/arrow-right";
+---
+
+<section
+    id="inicio"
+    class="relative flex min-h-screen items-center bg-black bg-cover bg-position-[70%_center] text-white md:bg-center"
+    style="background-image: url('/images/hero/hero-weider.webp');"
+>
+    <!-- Degradado general -->
+    <div
+        class="absolute inset-0 bg-linear-to-r from-black via-black/85 to-black/10"
+        aria-hidden="true"
+    >
+    </div>
+
+    <!-- Contenido -->
+    <div class="relative z-10 mx-auto w-full max-w-7xl px-6">
+        <div class="relative max-w-xl sm:max-w-2xl md:max-w-3xl">
+            <!-- Pincelada / panel decorativo -->
+            <img
+                src="/images/hero/brush-panel.png"
+                alt=""
+                aria-hidden="true"
+                class="pointer-events-none absolute left-1/2 top-1/2 -z-10 hidden w-[850px] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-65 md:block"
+            />
+
+            <!-- Texto -->
+            <div
+                class="flex flex-col items-start gap-6 px-8 py-12 sm:px-10 sm:py-14"
+            >
+                <span
+                    class="border-l-4 border-red-600 pl-3 text-sm font-bold uppercase tracking-[0.2em] text-red-500"
+                >
+                    Entrenamiento personalizado
+                </span>
+
+                <h1
+                    class="text-4xl font-black uppercase leading-none tracking-tight sm:text-5xl md:text-7xl"
+                >
+                    Weider Gym
+                </h1>
+
+                <p
+                    class="max-w-xl text-lg leading-relaxed text-gray-300 sm:text-xl md:max-w-2xl"
+                >
+                    Entrena en un espacio exclusivo en Temuco, con atención
+                    personalizada, clases de alto nivel y objetivos diseñados
+                    para ti.
+                </p>
+
+                <a
+                    href="#contacto"
+                    class="group inline-flex max-w-sm items-center justify-center gap-2 rounded-sm bg-red-600 px-4 py-3 text-center text-xs font-bold uppercase tracking-wide text-white transition hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-black sm:max-w-none sm:gap-3 sm:px-6 sm:text-base"
+                >
+                    <span class="sm:whitespace-nowrap">
+                        Agenda tu clase de prueba gratis
+                    </span>
+
+                    <ArrowRight
+                        class="size-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1"
+                        stroke-width={2.5}
+                        aria-hidden="true"
+                    />
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
