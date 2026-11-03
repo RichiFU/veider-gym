@@ -172,7 +172,7 @@ Algunos datos comerciales, como precios definitivos, redes sociales, horarios, d
 
 ## Autor
 
-**Ricardo Fuentes Urízar**
+**Ricardo Fuentes**
 
 Ingeniero Informático  
 Desarrollo web y soporte TI
